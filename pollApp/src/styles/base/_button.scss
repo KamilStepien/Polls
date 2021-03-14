@@ -1,0 +1,29 @@
+@import "../abstracts/variable";
+
+button
+{
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 40px;
+    border-color: transparent;
+    border-radius: 15px;
+    text-align: center;
+    outline: none;
+}
+
+.button-primary
+{
+    position: relative;
+    background-color: $primary-button-collor;
+    color: white;
+    z-index: 2;
+    
+}
+
+.button-secondary
+{
+    position: relative;
+    background-color: $secondary-button-collor;
+    color: black;
+   z-index: 1;
+}

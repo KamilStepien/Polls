@@ -1,0 +1,28 @@
+@import "../base/button";
+
+.toggle
+{
+    width: 300px;
+    position: relative;
+    
+
+    button 
+    {
+        width:  50% ;
+        height: 100%;
+        transition: all ease-in 0.2s;
+        
+    }
+
+    button:first-child
+    {
+        transform: translateX(10px);
+
+    }
+    button:last-child
+    {
+        transform: translateX(-10px);
+    }
+    
+}
+

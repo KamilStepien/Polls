@@ -1,0 +1,10 @@
+
+<div class="toggle" (click)="setOpposetToggleState()">
+  <button class="button-primary" [ngClass]="{'button-secondary': isToggleStateOne}" >Edycja</button>
+  <button class="button-primary"  [ngClass]="{'button-secondary': !isToggleStateOne}" >Widok</button>
+</div>
+<router-outlet></router-outlet>
+
+
+
+
