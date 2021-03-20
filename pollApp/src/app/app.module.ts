@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { PollCreateQuestionsComponent } from './poll/poll-create-questions/poll-create-questions.component';
 import { PollDiplayComponent } from './poll/poll-diplay/poll-diplay.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     PollCreateQuestionsComponent,
     PollDiplayComponent
+    
   ],
   imports: [
     BrowserModule,

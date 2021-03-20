@@ -3,27 +3,30 @@
 button
 {
     font-size: 1.2em;
-    font-weight: bold;
-    height: 40px;
-    border-color: transparent;
-    border-radius: 15px;
-    text-align: center;
+    font-weight: 700;
+    margin: 0 15px;
+    color:white;
+    background-color: transparent;
     outline: none;
-}
+    padding: 10px 30px;
+    border: solid 2px rgba($color: #ffffff, $alpha: 1.0);
+    border-radius: 20px;
+    opacity: 0.5;
+    transition: opacity ease-in 0.3s;
+    &:hover
+    {
+        opacity: 1;
+    }
+}   
+
+
+
+
 
 .button-primary
 {
     position: relative;
-    background-color: $primary-button-collor;
+    background-color: $primary-collor;
     color: white;
-    z-index: 2;
-    
 }
 
-.button-secondary
-{
-    position: relative;
-    background-color: $secondary-button-collor;
-    color: black;
-   z-index: 1;
-}

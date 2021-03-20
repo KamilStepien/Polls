@@ -1,33 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {MDCCheckbox} from '@material/checkbox';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent  {
   
-  isToggleStateOne:boolean = true;
 
-  constructor(private router:Router){}
   
-  ngOnInit(): void {
-   this.navigate(); 
+  constructor(){
+    
   }
 
-  setOpposetToggleState()
-  {
-    this.isToggleStateOne = !this.isToggleStateOne;
-    this.navigate();
-  }
-
-  private navigate()
-  {
-    (this.isToggleStateOne === false)
-    ?this.router.navigate(["/add-question"])
-    :this.router.navigate(["/poll-display"]);
-  
-  }
 
 }
