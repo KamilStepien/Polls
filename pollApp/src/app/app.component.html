@@ -1,32 +1,25 @@
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div class="body-background">
-    <div class="body-navbar">
-      <div class="navbar-logo"><p>Billetera</p></div>
-      <div class="navbar-menu">
-        <button>Home</button>
-        <button>About</button>
-        <button>Polls</button>
-      </div>
-      <div class="navbar-avatar">
-      </div>
+<div class="body-background">
+  <div class="body-navbar">
+    <div class="navbar-logo">
+      <p>Billetera</p>
     </div>
-    
+    <div class="navbar-menu">
+      <button>Home</button>
+      <button>About</button>
+      <button [routerLink]="['/poll-display']" routerLinkActive="router-link-active">Polls</button>
+    </div>
+    <div class="navbar-avatar">
+      <img src="https://nasz.orange.pl/t5/image/serverpage/image-id/4627i5CB80E28118354BB/image-size/large/is-moderation-mode/true?v=1.0&px=999">
+    </div>
   </div>
-  <div class="body-card">
-    d
-    <div class="card-title"></div>
+
+</div>
+<div class="body-card">
+  <div class="card-title">
+    <h1>New Polls</h1>
+  </div>
+  <div class="card-body">
     <router-outlet></router-outlet>
   </div>
- 
-</body>
-</html>
+  
+</div>

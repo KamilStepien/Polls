@@ -1,1 +1,18 @@
-<p>poll-create-questions works!</p>
+<form [formGroup]="questionForm" (ngSubmit)="addQuestion()">
+    <input type="text" class="poll-question-text" formControlName="questionName">
+
+    <div class="poll-answer-box">
+        <div class="poll-ansver-element" *ngFor="let answer of answers">
+            <input type="checkbox" [(ngModel)]="answer.isChecked" [ngModelOptions]="{standalone: true}" >
+            <p>{{answer.name}}</p>
+        </div>
+    </div>
+
+    <form class="poll-answer-form" [formGroup]="answerForm" (ngSubmit)="addAnswer()" >
+        <input type="checkbox" class="poll-answer-checkbox" formControlName="answerCheckbox">
+        <input type="text" class="poll-answer-text" formControlName="answerText">
+        <button class="poll-answer-button" [disabled]="answerForm.invalid" >Add Answer</button>
+    </form>
+    <button class="poll--button"  [disabled]="questionForm.invalid && answers.length<=0" >Add Question</button>
+</form>
+<button class="poll-answer-button">Save Poll</button>

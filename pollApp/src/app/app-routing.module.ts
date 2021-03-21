@@ -5,7 +5,6 @@ import { PollCreateQuestionsComponent } from './poll/poll-create-questions/poll-
 import { PollDiplayComponent } from './poll/poll-diplay/poll-diplay.component';
 
 const routes: Routes = [
-  {path:"add-question",component: PollCreateQuestionsComponent},
   {path:"poll-display", component: PollDiplayComponent}
 ];
 

@@ -1,24 +1,29 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PollCreateQuestionsComponent } from './poll/poll-create-questions/poll-create-questions.component';
 import { PollDiplayComponent } from './poll/poll-diplay/poll-diplay.component';
+import { PollService } from './shared/poll.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PollCreateQuestionsComponent,
-    PollDiplayComponent
+    PollDiplayComponent,
+     
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [PollService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
