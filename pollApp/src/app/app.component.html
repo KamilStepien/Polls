@@ -2,16 +2,15 @@
 </div>
   <div class="body-navbar">
     <div class="navbar-logo">
-      <p>Billetera</p>
+      <p>MadePolls</p>
     </div>
-    <a  class="menu-icon" (click)="hideMenu()"><fa-icon [icon]="fabars"></fa-icon></a>
       <div class="navbar-menu" [ngClass]="{'navbar-menu-diplay-none':isHideMenu}" >
         <button>Home</button>
         <button>About</button>
         <button [routerLink]="['/poll-display']" routerLinkActive="router-link-active">Polls</button>
       </div>
-    <div class="navbar-avatar">
-      <img src="https://nasz.orange.pl/t5/image/serverpage/image-id/4627i5CB80E28118354BB/image-size/large/is-moderation-mode/true?v=1.0&px=999">
+    <div class="navbar-avatar" >
+      <img (click)="hideMenu()" src="https://nasz.orange.pl/t5/image/serverpage/image-id/4627i5CB80E28118354BB/image-size/large/is-moderation-mode/true?v=1.0&px=999">
     </div>
   </div>
 

@@ -25,15 +25,16 @@
     }
 
 
+
   }
 }
 
 .body-background {
   position: absolute;
   top: 0;
-  height: 600px;
+  height: 700px;
   width: 100vw;
-  clip-path: ellipse(100% 600px at 10% 0%);
+  clip-path: ellipse(100% 700px at 10% 0%);
   background-color: $primary-collor;
   z-index: 1;
 }
@@ -42,7 +43,7 @@
 .body-navbar {
   position: relative;
   display: grid;
-  grid-template-columns: 30px 200px 1fr auto  150px 100px 30px;
+  grid-template-columns: 30px 200px 1fr auto  150px 30px;
   grid-template-rows: 200px ;
   align-items: center;
   justify-items: center;
@@ -88,7 +89,7 @@
   }
 
   .navbar-avatar {
-    grid-column: 6;
+    grid-column: 5;
     width: 80px;
     height: 80px;
     background-color: white;
