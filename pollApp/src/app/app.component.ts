@@ -1,6 +1,6 @@
-import { AfterContentInit, Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import {MDCCheckbox} from '@material/checkbox';
+import {  Component } from '@angular/core';
+
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +8,16 @@ import {MDCCheckbox} from '@material/checkbox';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent  {
-  
 
-  
+  fabars = faBars;
+  isHideMenu:boolean = true
   constructor(){
-    
+
   }
 
-
+  hideMenu()
+  {
+    this.isHideMenu = !this.isHideMenu;
+    console.log(this.isHideMenu);
+  }
 }
