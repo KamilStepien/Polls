@@ -3,8 +3,42 @@ button
     color: black;
 }
 
-.poll-ansver-element
+input[type=text]
+{
+  padding: 10px 10px;
+  font-size: 1.2em;
+}
+
+
+.poll-question-text
+{
+  width:  95%
+}
+
+.poll-answer-element
 {
     display: flex;
     align-items: center;
+}
+
+.poll-answer-form
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .poll-answer-text{
+   width: 100%;
+   margin: 0 20px;
+  }
+
+  .poll-answer-button
+  {
+    width: 300px;
+  }
+}
+
+.poll-addquestion-button, .poll-save--button
+{
+  width: 100%;
 }

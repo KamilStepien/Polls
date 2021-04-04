@@ -1,8 +1,8 @@
 <form [formGroup]="questionForm" (ngSubmit)="addQuestion()">
-    <input type="text" class="poll-question-text" formControlName="questionName">
+    <input type="text" class="poll-question-text" formControlName="questionName" placeholder="Question's text">
 
     <div class="poll-answer-box">
-        <div class="poll-ansver-element" *ngFor="let answer of answers">
+        <div class="poll-answer-element" *ngFor="let answer of answers">
             <input type="checkbox" [(ngModel)]="answer.isChecked" [ngModelOptions]="{standalone: true}" >
             <p>{{answer.name}}</p>
         </div>
@@ -10,9 +10,9 @@
 
     <form class="poll-answer-form" [formGroup]="answerForm" (ngSubmit)="addAnswer()" >
         <input type="checkbox" class="poll-answer-checkbox" formControlName="answerCheckbox">
-        <input type="text" class="poll-answer-text" formControlName="answerText"> 
+        <input type="text" class="poll-answer-text" formControlName="answerText" placeholder="Answer's text">
         <button class="poll-answer-button" [disabled]="answerForm.invalid" >Add Answer</button>
     </form>
-    <button class="poll--button"  [disabled]="questionForm.invalid && answers.length<=0" >Add Question</button>
+    <button class="poll-addquestion-button"  [disabled]="questionForm.invalid && answers.length<=0" >Add Question</button>
 </form>
-<button class="poll-answer-button">Save Poll</button>
+<button class="poll-save--button">Save Poll</button>

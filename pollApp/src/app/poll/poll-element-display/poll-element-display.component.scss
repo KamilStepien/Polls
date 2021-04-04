@@ -1,0 +1,22 @@
+.continer
+{
+
+  span
+  {
+    font-size: 1.3em;
+    &::after
+    {
+      content: ".";
+    }
+  }
+
+  ul
+  {
+    li
+    {
+      font-weight: 400;
+      margin: 5px 0;
+    }
+  }
+
+}

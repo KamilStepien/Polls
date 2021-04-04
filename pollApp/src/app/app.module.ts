@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { PollCreateQuestionsComponent } from './poll/poll-create-questions/poll-create-questions.component';
 import { PollDiplayComponent } from './poll/poll-diplay/poll-diplay.component';
 import { PollService } from './shared/poll.service';
+import { PollElementDisplayComponent } from './poll/poll-element-display/poll-element-display.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { PollService } from './shared/poll.service';
     AppComponent,
     PollCreateQuestionsComponent,
     PollDiplayComponent,
+    PollElementDisplayComponent,
 
 
   ],

@@ -9,10 +9,8 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent  {
 
-  fabars = faBars;
   isHideMenu:boolean = true
   constructor(){
-
   }
 
   hideMenu()
