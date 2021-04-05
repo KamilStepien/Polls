@@ -1,2 +1,2 @@
-<app-poll-element-display></app-poll-element-display>
+<app-poll-element-display [pollElementImport] = "question" [index] = "i+1" *ngFor="let question of pollService.getQuestions(); index as i"></app-poll-element-display>
 <app-poll-create-questions></app-poll-create-questions>

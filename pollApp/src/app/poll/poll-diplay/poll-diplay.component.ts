@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PollService } from 'src/app/shared/poll.service';
 
 @Component({
   selector: 'app-poll-diplay',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PollDiplayComponent implements OnInit {
 
-  constructor() { }
+  constructor(public pollService:PollService) { }
 
   ngOnInit(): void {
   }

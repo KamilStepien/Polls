@@ -1,18 +1,10 @@
 <div class="continer">
-<h3 class="title"><span>1</span> Lipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio velit, vestibulum ut felis sodales, maximus blandit elit. Aenean vitae.</h3>
-<ul>
-  <li>Lorem ipsum dolor.</li>
-  <li>Lorem ipsum dolor.</li>
-  <li>Lorem ipsum dolor.</li>
-  <li>Lorem ipsum dolor.</li>
+<h3 class="title"><span>{{index}}</span>{{pollElementImport.name}}</h3>
+<ul >
+  <div class="list-row" *ngFor="let answer of pollElementImport.answers" >
+    <fa-icon *ngIf="answer.isChecked" [icon]="faCheckCircle"></fa-icon>
+    <fa-icon *ngIf="!answer.isChecked" [icon]="faCircle" #elseBlock></fa-icon>
+    <li>{{answer.name}}</li>
+  </div>
 </ul>
 </div>
-<div class="continer">
-  <h3><span>2</span> Lipsum dolor sit amet, consectetur adipiscing elit. Pellentesque odio velit, vestibulum ut felis sodales, maximus blandit elit. Aenean vitae.</h3>
-  <ul>
-    <li>Lorem ipsum dolor.</li>
-    <li>Lorem ipsum dolor.</li>
-    <li>Lorem ipsum dolor.</li>
-    <li>Lorem ipsum dolor.</li>
-  </ul>
-  </div>

@@ -11,11 +11,17 @@ import { QuestionModule } from './question.module';
 export class PollService {
 
   private poll: QuestionModule[] = [];
-  
+
 
   addQuestion(name:string, answers:AnswerModel[])
   {
-    this.poll.push(new QuestionModule(name,  answers));
+    this.poll.push(new QuestionModule(name,  answers.slice()));
+  }
+
+
+  getQuestions(): QuestionModule []
+  {
+     return this.poll;
   }
 
   dispaly()

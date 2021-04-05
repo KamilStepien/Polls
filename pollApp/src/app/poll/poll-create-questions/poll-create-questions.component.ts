@@ -19,7 +19,7 @@ export class PollCreateQuestionsComponent   {
     {
       questionName: new FormControl("", [Validators.required])
     }
-  ) 
+  )
 
   answerForm = new FormGroup(
     {
@@ -27,16 +27,25 @@ export class PollCreateQuestionsComponent   {
       answerCheckbox: new FormControl("")
     }
   )
-  
+  private cleanAll()
+  {
+    this.answers = [];
+    this.answerForm.reset();
+    this.questionForm.reset();
+  }
+
+
   addAnswer()
   {
     this.answers.push(new AnswerModel(this.answerForm.value.answerText,Boolean(this.answerForm.value.answerCheckbox) ));
+    this.answerForm.reset();
   }
 
   addQuestion()
   {
     this.pollService.addQuestion(this.questionForm.value.questionName, this.answers );
     this.pollService.dispaly();
+    this.cleanAll();
   }
 
 

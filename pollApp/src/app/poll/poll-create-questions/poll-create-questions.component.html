@@ -7,12 +7,11 @@
             <p>{{answer.name}}</p>
         </div>
     </div>
-
     <form class="poll-answer-form" [formGroup]="answerForm" (ngSubmit)="addAnswer()" >
         <input type="checkbox" class="poll-answer-checkbox" formControlName="answerCheckbox">
         <input type="text" class="poll-answer-text" formControlName="answerText" placeholder="Answer's text">
         <button class="poll-answer-button" [disabled]="answerForm.invalid" >Add Answer</button>
     </form>
-    <button class="poll-addquestion-button"  [disabled]="questionForm.invalid && answers.length<=0" >Add Question</button>
+    <button class="poll-addquestion-button"  [disabled]="questionForm.invalid || answers.length<=0" >Add Question</button>
 </form>
 <button class="poll-save--button">Save Poll</button>

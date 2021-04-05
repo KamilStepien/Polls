@@ -15,10 +15,20 @@ input[type=text]
   width:  95%
 }
 
-.poll-answer-element
+.poll-answer-box
 {
-    display: flex;
-    align-items: center;
+  margin-top: 10px;
+  .poll-answer-element
+  {
+      display: flex;
+      align-items: center;
+      margin: 0 0 0 20px;
+      p
+      {
+        margin: 0.3em 0 0.3em 10px ;
+      }
+  }
+
 }
 
 .poll-answer-form
@@ -29,7 +39,7 @@ input[type=text]
 
   .poll-answer-text{
    width: 100%;
-   margin: 0 20px;
+   margin: 0 10px;
   }
 
   .poll-answer-button
