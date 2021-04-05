@@ -4,13 +4,13 @@
     <div class="navbar-logo">
       <p>MadePolls</p>
     </div>
-      <div class="navbar-menu" [ngClass]="{'navbar-menu-diplay-none':isHideMenu}" >
+      <div class="navbar-menu" [ngClass]="{'navbar-menu-diplay-none':display}" >
         <button>Home</button>
         <button>About</button>
         <button [routerLink]="['/poll-display']" routerLinkActive="router-link-active">Polls</button>
       </div>
     <div class="navbar-avatar" >
-      <img (click)="hideMenu()" src="https://nasz.orange.pl/t5/image/serverpage/image-id/4627i5CB80E28118354BB/image-size/large/is-moderation-mode/true?v=1.0&px=999">
+      <img (click)="display = !display" src="https://nasz.orange.pl/t5/image/serverpage/image-id/4627i5CB80E28118354BB/image-size/large/is-moderation-mode/true?v=1.0&px=999">
     </div>
   </div>
 
